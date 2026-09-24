@@ -4,87 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#f6f8f8">
-  <title>ObsForce | Anonymous supplementary page</title>
+  <title>ObsForce</title>
   <style>
-    :root { --ink:#18252b; --muted:#4f626a; --line:#d8e2e3; --paper:#fff; --bg:#f6f8f8; --accent:#087e86; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
-    a { color:#075e66; }
-    a:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
-    .wrap { width:min(1100px,calc(100% - 40px)); margin-inline:auto; }
-    header { border-bottom:1px solid var(--line); background:var(--paper); }
-    header .wrap { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:64px; }
-    .brand { color:var(--ink); font-weight:750; text-decoration:none; letter-spacing:-.02em; }
-    nav { display:flex; flex-wrap:wrap; gap:18px; font-size:.9rem; }
-    nav a { color:var(--muted); text-decoration:none; }
-    nav a:hover { color:var(--accent); text-decoration:underline; }
-    main { padding-bottom:72px; }
-    .hero { padding:76px 0 50px; }
-    .eyebrow { margin:0 0 12px; color:#087078; font-size:.76rem; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
-    h1 { max-width:940px; margin:0; font-size:clamp(2.35rem,5.4vw,4.7rem); line-height:1.09; letter-spacing:-.055em; }
-    .lead { max-width:760px; margin:25px 0 0; color:var(--muted); font-size:clamp(1.07rem,1.8vw,1.28rem); line-height:1.55; }
-    .notice { display:inline-block; margin-top:25px; padding:7px 12px; border:1px solid var(--line); border-radius:99px; color:var(--muted); background:var(--paper); font-size:.83rem; }
-    .metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:34px 0 8px; }
-    .metric { padding:22px 24px; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
-    .metric strong { display:block; font-size:clamp(1.65rem,3vw,2.35rem); line-height:1.1; letter-spacing:-.04em; }
-    .metric span { display:block; margin-top:7px; color:var(--muted); font-size:.91rem; }
-    .note { color:var(--muted); font-size:.88rem; }
-    section { padding-top:42px; scroll-margin-top:20px; }
-    h2 { margin:0 0 14px; font-size:clamp(1.55rem,3vw,2rem); line-height:1.2; letter-spacing:-.035em; }
-    section > p { max-width:790px; color:var(--muted); margin:0 0 20px; }
-    figure { margin:0; overflow:hidden; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
-    figure img { display:block; width:100%; height:auto; }
-    figcaption { padding:13px 17px 15px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
-    .stack { display:grid; gap:20px; }
-    .availability { padding:24px; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
-    .availability p { max-width:790px; margin:0; color:var(--muted); }
-    footer { padding:24px 0 40px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
-    @media (max-width:650px) { .wrap { width:min(100% - 28px,1100px); } header .wrap { align-items:flex-start; flex-direction:column; padding-block:15px; gap:7px; } nav { gap:12px; } .hero { padding-top:50px; } .metrics { grid-template-columns:1fr; } .metric { padding:17px 20px; } }
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #18252b; background: #f6f8f8; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; }
+    main { width: min(640px, 100%); }
+    .eyebrow { color: #087078; font-size: .78rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 14px 0; font-size: clamp(3rem, 8vw, 5rem); letter-spacing: -.055em; line-height: 1; }
+    p { color: #4f626a; line-height: 1.6; }
   </style>
 </head>
 <body>
-  <header><div class="wrap">
-    <a class="brand" href="#top">ObsForce</a>
-    <nav aria-label="Page sections"><a href="#method">Method</a><a href="#evaluation">Evaluation</a><a href="#real-world">Real-world videos</a><a href="#materials">Materials</a></nav>
-  </div></header>
-  <main id="top" class="wrap">
-    <div class="hero">
-      <p class="eyebrow">Anonymous research supplement</p>
-      <h1>ObsForce: Learning Force-Aware Articulation by Observing Humans</h1>
-      <p class="lead">From a third-person RGB video, ObsForce estimates a 3D interaction trajectory and a force profile. A contact click and an object–action prompt can be supplied or inferred from the video.</p>
-      <span class="notice">Anonymous submission to ICLR 2027</span>
-      <div class="metrics" aria-label="Evaluation results">
-        <div class="metric"><strong>6.6 cm</strong><span>Trajectory ATE</span></div>
-        <div class="metric"><strong>4.81 N</strong><span>Peak-force MAE</span></div>
-        <div class="metric"><strong>4.95 N</strong><span>Force-profile RMSE</span></div>
-      </div>
-      <p class="note">Mean across three training seeds on the paper's Eval subset of Hoi!; contact click and object–action prompt supplied. These are evaluation results, not robot success rates.</p>
-    </div>
-    <section id="method" aria-labelledby="method-heading">
-      <h2 id="method-heading">Method</h2>
-      <p>Limited instrumented recordings teach a set of force prototypes organized by measured effort. Video features select and adapt a prior; a conditional flow then refines the tracked trajectory and force profile together. Paired human and gripper recordings transfer measured-force supervision to human video.</p>
-      <figure><img src="figures/architecture.png" alt="RGB video passes through frozen motion, depth and vision-language encoders; learned force prototypes and a joint conditional flow predict a 3D trajectory and force profile." width="1971" height="597"><figcaption>ObsForce architecture. Contact and text guidance are optional.</figcaption></figure>
-    </section>
-    <section id="evaluation" aria-labelledby="evaluation-heading">
-      <h2 id="evaluation-heading">Evaluation examples</h2>
-      <p>Predicted trajectories and force profiles on human and instrumented-gripper interactions. Measured force is available for gripper recordings; a paired gripper trace is a reference for human video, not a human-force measurement.</p>
-      <div class="stack">
-        <figure><img src="figures/qualitative_main.png" alt="Three example interactions comparing ObsForce trajectories with ground truth and tracking baselines, with predicted and measured or paired-reference force traces." width="1100" height="828" loading="lazy"><figcaption>Refrigerator, cupboard, and drawer examples. The force trace for the human example has a paired gripper reference.</figcaption></figure>
-        <figure><img src="figures/validation_examples.png" alt="Three validation interactions with predicted trajectories and force profiles; two gripper examples include measured-force curves." width="1300" height="810" loading="lazy"><figcaption>Additional evaluation examples. Human force is unmeasured.</figcaption></figure>
-      </div>
-    </section>
-    <section id="real-world" aria-labelledby="realworld-heading">
-      <h2 id="realworld-heading">Real-world videos</h2>
-      <p>The study includes 46 episodes from seven phone videos of six kitchen objects. The figure shows predictions under different input combinations and predicted peaks across actions and objects.</p>
-      <figure><img src="figures/realworld_combined.png" alt="Predicted trajectories with supplied and inferred contact and prompt inputs, alongside predicted peak forces for kitchen-object opening and closing episodes." width="1380" height="805" loading="lazy"><figcaption>Qualitative real-world predictions. The peak-force values are model estimates.</figcaption></figure>
-    </section>
-    <section id="materials" aria-labelledby="materials-heading">
-      <h2 id="materials-heading">Materials</h2>
-      <div class="availability"><p>Code, checkpoints, and demonstration videos are being prepared for anonymous release. The paper and appendix describe the full evaluation protocol and tables.</p></div>
-    </section>
+  <main>
+    <p class="eyebrow">Anonymous ICLR 2027 submission</p>
+    <h1>ObsForce</h1>
+    <p>Project page under preparation.</p>
   </main>
-  <footer><div class="wrap">ObsForce · Anonymous supplementary page for review</div></footer>
 </body>
 </html>
